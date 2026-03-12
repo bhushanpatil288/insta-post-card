@@ -1,5 +1,5 @@
 import PostImage from "./PostCard-Components/PostImage"
-import Comments from "./PostCard-Components/Comments"
+import Comments from "./PostCard-Components/CommentSection"
 
 const PostCard = () => {
   return (
