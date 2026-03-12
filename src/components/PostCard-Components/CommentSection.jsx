@@ -5,8 +5,9 @@ import { emma } from "../../constants/data"
 
 
 const CommentSection = () => {
+  
   return (
-    <div className="w-2/5 bg-white overflow-y-auto">
+    <div className="w-2/5 bg-white overflow-y-auto h-full">
       {/* owner account name and img */}
       <div className="p-5 w-full sticky top-0 bg-white flex items-center justify-between font-semibold select-none border-b border-gray-200">
         <div className="flex items-center gap-3">
@@ -33,8 +34,9 @@ const CommentSection = () => {
           Already missing this beach and this amazing group.
           Next reunion trip planning starts now! 🌅🔥
         </p>
+
         <UserComments />
-      </div>
+    </div>
     </div>
   )
 }

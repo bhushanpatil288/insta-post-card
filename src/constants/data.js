@@ -5,6 +5,7 @@ import will from "/images/will-smith.png"
 import alex from "/images/alex-mercer.png"
 import kirmada from "/images/kirmada.png"
 import generic_user from "/images/generic-user.png";
+console.log(generic_user)
 
 const comments = [
   {
