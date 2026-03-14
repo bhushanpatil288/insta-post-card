@@ -10,6 +10,7 @@ const UserComments = () => {
   const [isEmojiOpen, SetIsEmojiOpen] = useState(false);
   const [comment, setComment] = useState('');
   const {lComments, setLComments} = useContext(CommentContext);
+  const [error, setError] = useState({});
   const [emoji, setEmoji] = useState('');
 
   const handleChange = (e) => {
@@ -23,6 +24,12 @@ const UserComments = () => {
   }
   
   const handleClick = (e)=>{
+    if(comment.trim() === ''){
+      setError({message: "comment cannot be empty"});
+      return;
+    } else{
+      setError({});
+    }
     let c = {
       id: Date.now(),
       username: "unknown",
@@ -49,6 +56,9 @@ const UserComments = () => {
         })}
       </div>
 
+        {Object.keys(error).length != 0 &&
+          <p className="text-red-600 text-center">{error.message}</p>
+        }
 
       <div className="flex gap-1 relative mt-full">
         <Button onClick={() => { SetIsEmojiOpen(!isEmojiOpen) }}>

@@ -1,5 +1,5 @@
 import PostImage from "./PostCard-Components/PostImage"
-import Comments from "./PostCard-Components/CommentSection"
+import CommentSection from "./PostCard-Components/CommentSection"
 
 const PostCard = () => {
   return (
@@ -9,7 +9,7 @@ const PostCard = () => {
         <div className="shadow-xl flex h-full">
           <PostImage />
 
-          <Comments />
+          <CommentSection />
         </div>
 
       </div>
